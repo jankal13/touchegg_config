@@ -42,33 +42,80 @@ sudo nano ~/.config/touchegg/touchegg.conf
 The commands
 
 ```
-[FOUR_FINGERS_DRAG_DOWN]
-action=SHOW_DESKTOP
-settings=
-
-[FOUR_FINGERS_DRAG_LEFT]
-action=CHANGE_DESKTOP
-settings=PREVIOUS
-
-[FOUR_FINGERS_DRAG_RIGHT]
-action=CHANGE_DESKTOP
-settings=NEXT
-
-[THREE_FINGERS_DRAG_UP]
-action=MAXIMIZE_RESTORE_WINDOW
-settings=
-
-[THREE_FINGERS_DRAG_DOWN]
-action=MINIMIZE_WINDOW
-settings=  
-
-[THREE_FINGERS_DRAG_LEFT]
-action=CHANGE_VIEWPORT
-settings=PREVIOUS
-
-[THREE_FINGERS_DRAG_RIGHT]
-action=CHANGE_VIEWPORT
-settings=NEXT
+<touchégg>
+  <settings>
+    <property name="composed_gestures_time">111</property>
+  </settings>
+  <application name="All">
+    <gesture type="DRAG" fingers="1" direction="ALL">
+      <action type="DRAG_AND_DROP">BUTTON=1</action>
+    </gesture>
+    <gesture type="DRAG" fingers="4" direction="DOWN">
+      <action type="SEND_KEYS">Super+a</action>
+    </gesture>
+    <gesture type="DRAG" fingers="4" direction="UP">
+      <action type="SEND_KEYS">Super+s</action>
+    </gesture>
+    <gesture type="DRAG" fingers="4" direction="RIGHT">
+      <action type="SEND_KEYS">Super+Left</action>
+    </gesture>
+    <gesture type="DRAG" fingers="4" direction="LEFT">
+      <action type="SEND_KEYS">Super+Right</action>
+    </gesture>
+    <gesture type="DRAG" fingers="3" direction="UP">
+      <action type="MAXIMIZE_RESTORE_WINDOW"></action>
+    </gesture>
+    <gesture type="DRAG" fingers="3" direction="DOWN">
+      <action type="MINIMIZE_WINDOW"></action>
+    </gesture>
+    <gesture type="DRAG" fingers="3" direction="RIGHT">
+      <action type="SEND_KEYS">Control+Super+Right</action>
+    </gesture>
+    <gesture type="DRAG" fingers="3" direction="LEFT">
+      <action type="SEND_KEYS">Control+Super+Left</action>
+    </gesture>
+    <gesture type="DRAG" fingers="2" direction="ALL">
+      <action type="SCROLL">SPEED=7:INVERTED=true</action>
+    </gesture>
+    <gesture type="PINCH" fingers="2" direction="IN">
+      <action type="SEND_KEYS">Control+minus</action>
+    </gesture>
+    <gesture type="PINCH" fingers="2" direction="OUT">
+      <action type="SEND_KEYS">Control+plus</action>
+    </gesture>
+    <gesture type="TAP" fingers="3" direction="">
+      <action type="MOUSE_CLICK">BUTTON=2</action>
+    </gesture>
+    <gesture type="TAP" fingers="2" direction="">
+      <action type="MOUSE_CLICK">BUTTON=3</action>
+    </gesture>
+    <gesture type="TAP" fingers="1" direction="">
+      <action type="MOUSE_CLICK">BUTTON=1</action>
+    </gesture>
+  </application>
+  <application name="Gwenview, Shotwell, Evince">
+    <gesture type="ROTATE" fingers="2" direction="LEFT">
+      <action type="SEND_KEYS">Control+L</action>
+    </gesture>
+    <gesture type="PINCH" fingers="2" direction="IN">
+      <action type="SEND_KEYS">Control+KP_Add</action>
+    </gesture>
+    <gesture type="PINCH" fingers="2" direction="OUT">
+      <action type="SEND_KEYS">Control+KP_Subtract</action>
+    </gesture>
+    <gesture type="ROTATE" fingers="2" direction="RIGHT">
+      <action type="SEND_KEYS">Control+R</action>
+    </gesture>
+  </application>
+  <application name="Dolphin, Midori, Chromium-browser, Chrome, Firefox">
+    <gesture type="DRAG" fingers="5" direction="RIGHT">
+      <action type="SEND_KEYS">Alt+Home</action>
+    </gesture>
+    <gesture type="DRAG" fingers="5" direction="ALL">
+      <action type="SEND_KEYS">Control+Next</action>
+    </gesture>
+  </application>
+</touchégg>
 ```
 
 We save our file by using STRG + O and then exit the editor by STRG + X.
