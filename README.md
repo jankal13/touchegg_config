@@ -5,7 +5,7 @@ Configuration file for Touchegg to have Mac-like feeling
 
 After Touchegg is installed and we added Multigestures (e.g. through geis-tools) we need to add corresponding gestures to it. If you didn't add Multigestures yet, feel free to follow this tutorial: https://www.maketecheasier.com/add-multitouch-gestures-ubuntu/
 
-# Commands we want
+## Commands we want
 
 To get a Mac-like feeling for Linux we need to first know which gestures are supported by the tool. You can find the list of them here: https://github.com/JoseExposito/touchegg/wiki/All-gestures-supported-by-Touch%C3%A9gg
 
@@ -24,7 +24,7 @@ The actions we want to have with Touchegg are:
 4 Fingers - Down	Previous Desktop
 ...
 
-# Steps
+## Steps
 
 First we need to create the configuration file. For that we first generate the corresponding folder for Touchegg.
 ...
