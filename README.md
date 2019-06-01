@@ -41,84 +41,15 @@ sudo nano ~/.config/touchegg/touchegg.conf
 ###
 The commands
 
-```
-<touchégg>
-  <settings>
-    <property name="composed_gestures_time">111</property>
-  </settings>
-  <application name="All">
-    <gesture type="DRAG" fingers="1" direction="ALL">
-      <action type="DRAG_AND_DROP">BUTTON=1</action>
-    </gesture>
-    <gesture type="DRAG" fingers="4" direction="DOWN">
-      <action type="SEND_KEYS">Super+a</action>
-    </gesture>
-    <gesture type="DRAG" fingers="4" direction="UP">
-      <action type="SEND_KEYS">Super+s</action>
-    </gesture>
-    <gesture type="DRAG" fingers="4" direction="RIGHT">
-      <action type="SEND_KEYS">Super+Left</action>
-    </gesture>
-    <gesture type="DRAG" fingers="4" direction="LEFT">
-      <action type="SEND_KEYS">Super+Right</action>
-    </gesture>
-    <gesture type="DRAG" fingers="3" direction="UP">
-      <action type="MAXIMIZE_RESTORE_WINDOW"></action>
-    </gesture>
-    <gesture type="DRAG" fingers="3" direction="DOWN">
-      <action type="MINIMIZE_WINDOW"></action>
-    </gesture>
-    <gesture type="DRAG" fingers="3" direction="RIGHT">
-      <action type="SEND_KEYS">Control+Super+Right</action>
-    </gesture>
-    <gesture type="DRAG" fingers="3" direction="LEFT">
-      <action type="SEND_KEYS">Control+Super+Left</action>
-    </gesture>
-    <gesture type="DRAG" fingers="2" direction="ALL">
-      <action type="SCROLL">SPEED=7:INVERTED=true</action>
-    </gesture>
-    <gesture type="PINCH" fingers="2" direction="IN">
-      <action type="SEND_KEYS">Control+minus</action>
-    </gesture>
-    <gesture type="PINCH" fingers="2" direction="OUT">
-      <action type="SEND_KEYS">Control+plus</action>
-    </gesture>
-    <gesture type="TAP" fingers="3" direction="">
-      <action type="MOUSE_CLICK">BUTTON=2</action>
-    </gesture>
-    <gesture type="TAP" fingers="2" direction="">
-      <action type="MOUSE_CLICK">BUTTON=3</action>
-    </gesture>
-    <gesture type="TAP" fingers="1" direction="">
-      <action type="MOUSE_CLICK">BUTTON=1</action>
-    </gesture>
-  </application>
-  <application name="Gwenview, Shotwell, Evince">
-    <gesture type="ROTATE" fingers="2" direction="LEFT">
-      <action type="SEND_KEYS">Control+L</action>
-    </gesture>
-    <gesture type="PINCH" fingers="2" direction="IN">
-      <action type="SEND_KEYS">Control+KP_Add</action>
-    </gesture>
-    <gesture type="PINCH" fingers="2" direction="OUT">
-      <action type="SEND_KEYS">Control+KP_Subtract</action>
-    </gesture>
-    <gesture type="ROTATE" fingers="2" direction="RIGHT">
-      <action type="SEND_KEYS">Control+R</action>
-    </gesture>
-  </application>
-  <application name="Dolphin, Midori, Chromium-browser, Chrome, Firefox">
-    <gesture type="DRAG" fingers="5" direction="RIGHT">
-      <action type="SEND_KEYS">Alt+Home</action>
-    </gesture>
-    <gesture type="DRAG" fingers="5" direction="ALL">
-      <action type="SEND_KEYS">Control+Next</action>
-    </gesture>
-  </application>
-</touchégg>
-```
+We start to edit the touchegg config file just like the file touchegg.conf in this rep. You can just copy & paste my template, save the file by using STRG + O and then exit the editor by STRG + X.
 
-We save our file by using STRG + O and then exit the editor by STRG + X.
+### Additional
+
+You might also want to edit the ~/.xprofile file to start Touchegg on session startup. It is also provided as template in this rep.
+
+```
+sudo nano ~/.xprofile
+```
 
 Now Touchegg should provide a Mac-ish feeling. 
 
