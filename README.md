@@ -53,3 +53,14 @@ sudo nano ~/.xprofile
 
 Now Touchegg should provide a Mac-ish feeling. 
 
+### Notes
+I used an Asus UA330 w/ ElementaryOS Luna.
+
+I first had problems to use Touchegg. It said something about "Failed to load canberra-gtk-module". To fix this issue you just need to provide the module:
+
+```
+sudo apt-get install libcanberra-gtk-module
+```
+
+This should fix it.
+
